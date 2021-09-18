@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "2580fca3-2ae7-4a14-b2a2-d22b6e1853ea",
+		"name": "impact app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "upload csv",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "files",
+							"type": "file",
+							"src": "/Users/aryabharat/Desktop/projects/impact_app/data.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://lit-tor-11047.herokuapp.com/students/upload",
+					"protocol": "https",
+					"host": [
+						"lit-tor-11047",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"students",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get by id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "files",
+							"type": "file",
+							"src": "/Users/aryabharat/Desktop/projects/impact_app/data.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://lit-tor-11047.herokuapp.com/students/50890e0a-f9ab-4223-8833-7879b043dfa2/result",
+					"protocol": "https",
+					"host": [
+						"lit-tor-11047",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"students",
+						"50890e0a-f9ab-4223-8833-7879b043dfa2",
+						"result"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get student",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "files",
+							"type": "file",
+							"src": "/Users/aryabharat/Desktop/projects/impact_app/data.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://lit-tor-11047.herokuapp.com/students/?resultStatus=passed",
+					"protocol": "https",
+					"host": [
+						"lit-tor-11047",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"students",
+						""
+					],
+					"query": [
+						{
+							"key": "resultStatus",
+							"value": "passed"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
