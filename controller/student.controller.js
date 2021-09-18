@@ -60,7 +60,7 @@ async function readFile(filepath){
         .parseStream(stream, {headers : true})
         .on("data", function(d){
             // d = [...data,...d]
-            d.Age = parseInt(d.Age)
+            d.age = parseInt(d.age)
             d.mark1 = parseInt(d.mark1)
             d.mark2 = parseInt(d.mark2)
             d.mark3 = parseInt(d.mark3)
