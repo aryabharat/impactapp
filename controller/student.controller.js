@@ -11,8 +11,8 @@ async function uploadStudentCSV(req,res,nex){
           }
         let data = await readFile(req.files.files.tempFilePath)
 
-      await  prisma.student.createMany({data}).
-      res.send({msg:"user created", status:200})
+      await  prisma.student.createMany({data})
+      return res.send({msg:"user created", status:200})
 
     }catch(err){
         console.log(err);
@@ -28,6 +28,7 @@ async function getStudentResult(req,res,nex){
         return res.send({msg:"no student with this id", status:200})
       res.send({msg:stu, status:200})
     }catch(err){
+        console.log(err);
         res.send({msg:err.message, status:400})
     }
 }
@@ -44,6 +45,7 @@ async function getStudent(req,res,nex){
         return  res.send({data:"invalid resultStatus", status:200})
          
     }catch(err){
+        console.log(err);
         res.send({msg:err.message, status:400})
     }
 }
